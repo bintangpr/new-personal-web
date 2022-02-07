@@ -1,12 +1,18 @@
 
 function profile() {
     return (
-      <div className="h-screen bg-blue">
-        <div className="w-4/5 mx-auto">
-          <h1 className="text-white text-2xl pt-10">My Profile</h1>
+      <div>
+        <div className="h-4/5screen bg-blue pt-16">
+          <div className="w-4/5 mx-auto">
+            <h1 className="text-white text-medium text-2xl pt-10">MY PROFILE</h1>
+            <p className="text-white my-20 text-medium text-xl">My name is Muhammad Bintang Prabowo im 20 years old, i am a undergraduated student at informatics engineering Brawijaya University im a self-driven individual with great ambition and a will to do my best at everything I undertake. Possesses excellent interpersonal skills, good communication and has the ability to relate well to people from all backgrounds, being able to work under pressure whilst still retaining a good sense of humour even when facing adversity. </p>
+          </div>
         </div>
-        
+        <div className="h-1/5screen bg-white">
+
+        </div>
       </div>
+      
     );
   }
   

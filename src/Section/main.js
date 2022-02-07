@@ -1,7 +1,6 @@
 import React from 'react';
 import {ReactComponent as ProfilePic} from '../img/Profile.svg';
 import {ReactComponent as ArrowScroll} from '../img/ArrowScroll.svg';
-
 import Navbar from '../component/navbar';
 
 function main() {

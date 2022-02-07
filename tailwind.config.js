@@ -56,6 +56,8 @@ module.exports = {
       ...theme('spacing'),
       full: '100%',
       screen: '100vh',
+      '4/5screen': '80vh',
+      '1/5screen': '20vh',
       '1/2': '50%',
     }),
 
