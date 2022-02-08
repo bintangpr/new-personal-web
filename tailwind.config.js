@@ -19,7 +19,7 @@ module.exports = {
       lightgreen: '#23B5D3',
       blue: '#279AF1',
       red:'#EA526F',
-      whitebone:'#F7',
+      bonewhite:'#F7F7F7',
     },
     spacing: {
       px: '1px',
@@ -56,8 +56,10 @@ module.exports = {
       ...theme('spacing'),
       full: '100%',
       screen: '100vh',
-      '4/5screen': '80vh',
-      '1/5screen': '20vh',
+      '3/4screen': '75vh',
+      '1/4screen': '25vh',
+      '3/10screen': '30vh',
+      '2/5screen': '40vh',
       '1/2': '50%',
     }),
 
