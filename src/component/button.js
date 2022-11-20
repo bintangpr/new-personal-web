@@ -29,7 +29,8 @@ const Button = forwardRef((props, _ref) => {
 
     const seteverything = (type) => {
         setActive(!Active)
-        setBtn(type) 
+        setBtn(type)
+        props.getData(Btn) 
     }
     
       return (
