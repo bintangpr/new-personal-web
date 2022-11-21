@@ -1,11 +1,7 @@
 import React, { useState } from "react";
 import Button from "../component/button";
 import Porto from "../component/porto";
-import {ReactComponent as Rentrips} from '../img/Rentrips.svg'
-import {ReactComponent as Lingoschool} from '../img/Lingoschool.svg'
-import {ReactComponent as Ovent} from '../img/Ovent.svg'
-import {ReactComponent as BCC} from '../img/BCC.svg'
-import {ReactComponent as DSI} from '../img/DSI.svg'
+
 
 
 function MyWork(){
@@ -80,13 +76,13 @@ function MyWork(){
         // <h1>INI PERCOBAAN WEB</h1>
         portoWeb.map(({Image, projectName, description})=>{
           return(
-            <Porto img={Image} projectName={projectName} description={description}/>
+            <Porto img={Image} projectName={projectName} description={description} size="max-h-44 my-2 mx-auto"/>
           )
         })
         )
       } else {
         return(
-          protoAndroid.map(({Image, projectName, description,size})=>{
+          protoAndroid.map(({Image, projectName, description})=>{
             return(
               <Porto img={Image} projectName={projectName} description={description} size="h-44 mx-auto"/>
             )

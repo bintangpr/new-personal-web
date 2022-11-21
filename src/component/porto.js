@@ -33,7 +33,7 @@ function porto(props){
     return(
         <div className='flex justify-between my-4'>
             <div id='Pict' className='w-1/3 h-48 rounded-2xl'>
-                <img src={check(props.img)} className={props.size} alt="portofolio" />
+                <img src={check(props.img)} className={props.size} alt="portofolio"  />
                 {console.log(props.img)}
             </div>
             <div id='information' className='w-7/12 h-48'>
