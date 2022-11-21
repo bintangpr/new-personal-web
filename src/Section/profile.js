@@ -11,8 +11,7 @@ function profile() {
           <p className="text-xl font-normal">{profileText.myProfile}</p>
           <div className="my-4 flex justify-center gap-24">
             <Card name="Frontend Developer" bg="bg-blue/25" border="border-blue" img={CodeImage} techlist={techListing}/>
-            <Card name="Design" bg="bg-lightgreen/25" border="border-lightgreen" img={CodeImage} techlist={androidListing}/>
-           
+            <Card name="Android Developer" bg="bg-lightgreen/25" border="border-lightgreen" img={CodeImage} techlist={androidListing}/>
           </div>
         </div>
       </div>

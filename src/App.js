@@ -1,6 +1,6 @@
 import Main from "./Section/main";
 import Profile from "./Section/profile";
-import Test from "./Section/test";
+import Test from "./Section/footer";
 import MyWork from "./Section/myWork";
 
 function App() {
