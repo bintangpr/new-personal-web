@@ -1,6 +1,7 @@
 import React from 'react';
 import {ReactComponent as ProfilePic} from '../img/Profile.svg';
 import {ReactComponent as Bubble} from '../img/Bubble.svg';
+import { Link, animateScroll as scroll } from "react-scroll";
 
 
 function main() {
@@ -19,7 +20,15 @@ function main() {
           </div>
           <div className='mt-8 flex items-center'>
             <button className='mx-auto h-12 w-36 bg-blue/25 border rounded-md text-black hover:bg-[#279AF1] hover:text-white'>
+            <Link
+                activeClass="active"
+                to="section1"
+                spy={true}
+                smooth={true}
+                offset={-70}
+                duration={500}>
               <h1 className='my-auto text-xl font-medium text-center'>Learn More</h1>
+            </Link>
             </button>
           </div>
           <div>
