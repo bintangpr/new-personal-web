@@ -1,7 +1,7 @@
 import { profileText, techListing, androidListing } from "../aset/text";
 import Card from "../component/card";
 import CodeImage from '../img/CodeImg.svg'
-import { Link, DirectLink, Element, Events, animateScroll as scroll, scrollSpy, scroller } from 'react-scroll'
+import { Element } from 'react-scroll'
 
 function profile() {
     return (
