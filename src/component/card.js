@@ -8,10 +8,10 @@ function card(props) {
     techlist = ["React","JavaScript"]
   }
   const listItems = techlist.map((techlist) =>
-  <h1 className="text-black text-xl font-normal">{techlist}</h1>
+  <h1 className="text-black text-lg md:text-xl font-normal">{techlist}</h1>
 );
     return (
-      <div className={`h-2/5screen ${props.bg} w-72 border-2 rounded-lg ${props.border}`}  >
+      <div className={`mx-auto my-2 sm:my-0 sm:mx-0 h-80 sm:h-3/5screen md:h-2/5screen ${props.bg} w-64 sm:w-72 border-2 rounded-lg ${props.border}`}  >
           <div className='my-4 w-24 h-24 rounded-full border-2 mx-auto border-black flex flex-col justify-center'>
              <img src={props.img} alt="icon" className="mx-auto"/>
           </div>

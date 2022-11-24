@@ -51,18 +51,18 @@ function MyWork(){
       if(type === "web"){
         
         if(btnWeb != null){
-          btnWeb.className = `h-12 w-36 bg-[#279AF1] border rounded-md text-white`
+          btnWeb.className = `h-8 md:h-12 w-24 md:w-36 bg-[#279AF1] border rounded-md text-white`
         }
         if (btnAndroid != null){
-            btnAndroid.className = `h-12 w-36 bg-blue/25 border rounded-md text-black hover:bg-[#279AF1] hover:text-white`
+            btnAndroid.className = `h-8 md:h-12 w-24 md:w-36 bg-blue/25 border rounded-md text-black hover:bg-[#279AF1] hover:text-white`
         }
         setWeb(true)
       } else {
         if(btnWeb != null){
-          btnWeb.className = `h-12 w-36 bg-blue/25 border rounded-md text-black hover:bg-[#279AF1] hover:text-white`
+          btnWeb.className = `h-8 md:h-12 w-24 md:w-36 bg-blue/25 border rounded-md text-black hover:bg-[#279AF1] hover:text-white`
         }
         if(btnAndroid != null){
-          btnAndroid.className = `h-12 w-36 bg-[#279AF1] border rounded-md text-white`
+          btnAndroid.className = `h-8 md:h-12 w-24 md:w-36 bg-[#279AF1] border rounded-md text-white`
         }
         setWeb(false)
       }
@@ -74,7 +74,7 @@ function MyWork(){
         // <h1>INI PERCOBAAN WEB</h1>
         portoWeb.map(({Image, projectName, description})=>{
           return(
-            <Porto img={Image} projectName={projectName} description={description} size="max-h-44 my-2 mx-auto"/>
+            <Porto img={Image} projectName={projectName} description={description} size="h-44 my-2 mx-auto"/>
           )
         })
         )
@@ -92,12 +92,12 @@ function MyWork(){
     return(
         <div className="pt-16">
         <div className="w-4/5 mx-auto">
-          <div className="bg-lightgreen w-56 h-3"/>
-          <h1 className="my-4 text-3xl font-medium text-blue">My Works</h1>
+          <div className="bg-lightgreen w-32 sm:w-56 h-3"/>
+          <h1 className="my-4 text-2xl md:text-3xl font-medium text-blue">My Works</h1>
         
           <div className="my-4 flex justify-center gap-4">
             <Button type="web" getData={getType} styled={true} />
-              <div className="w-2 h-10 my-auto bg-lightgreen"/>
+              <div className="w-2 h-8 md:h-10 my-auto bg-lightgreen"/>
             <Button type="android" getData={getType}/>
           </div>
           <div className="mt-4">

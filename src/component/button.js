@@ -10,9 +10,9 @@ const Button = forwardRef((props, _ref) => {
 
     const defaultStyle = (styled) => {
         if(styled){
-            return (`h-12 w-36 bg-[#279AF1] border rounded-md text-white`)
+            return (`h-8 md:h-12 w-24 md:w-36 bg-[#279AF1] border rounded-md text-white`)
         } else {
-            return (`h-12 w-36 bg-blue/25 border rounded-md text-black hover:bg-[#279AF1] hover:text-white`)
+            return (`h-8 md:h-12 w-24 md:w-36 bg-blue/25 border rounded-md text-black hover:bg-[#279AF1] hover:text-white`)
         }
     }
     
@@ -23,7 +23,7 @@ const Button = forwardRef((props, _ref) => {
         value={props.type}
         onClick={()=> seteverything(props.type)} 
         > 
-            <h1 className='text-xl font-medium text-center'>{props.type}</h1>
+            <h1 className='text-lg md:text-xl font-medium text-center'>{props.type}</h1>
         </button>
       );
     })

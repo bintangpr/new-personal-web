@@ -31,17 +31,32 @@ function porto(props){
     }
 
     return(
-        <div className='flex justify-between my-4'>
-            <div id='Pict' className='w-1/3 h-48 rounded-2xl'>
-                <img src={check(props.img)} className={props.size} alt="portofolio"  />
-                {console.log(props.img)}
+        <div>
+            {/* WEB AND TABLET SIZE */}
+            <div className='hidden sm:flex justify-between my-4'>
+                <div id='Pict' className='w-1/3 h-48 rounded-2xl'>
+                    <img src={check(props.img)} className={props.size} alt="portofolio"  />
+                    {console.log(props.img)}
+                </div>
+                <div id='information' className='w-7/12 h-48'>
+                    <h1 id='Title' className='text-lg md:text-xl font-medium text-black'>{props.projectName}</h1>
+                    <div className='my-2 w-32 h-2 bg-blue'/>
+                    <p className='text-base md:texl-lg font-normal'>{props.description}</p>
+                </div>
             </div>
-            <div id='information' className='w-7/12 h-48'>
-                <h1 id='Title' className='text-xl font-medium text-black'>{props.projectName}</h1>
-                <div className='my-2 w-32 h-2 bg-blue'/>
-                <p className='texl-lg fpnt-normal'>{props.description}</p>
+            {/* mobile size */}
+            <div className='block sm:hidden'>
+                <div id='Pict' className='w-42 h-48 rounded-2xl'>
+                    <img src={check(props.img)} className={props.size} alt="portofolio"  />
+                </div>
+                <div id='information' className='w-42 mb-4'>
+                    <h1 id='Title' className='text-lg md:text-xl font-medium text-black'>{props.projectName}</h1>
+                    <div className='my-2 w-32 h-2 bg-blue'/>
+                    <p className='text-base md:texl-lg font-normal'>{props.description}</p>
+                </div>
             </div>
         </div>
+        
     )
 }
 
