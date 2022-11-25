@@ -6,25 +6,16 @@ import { portoWeb, protoAndroid } from "../aset/text";
 function MyWork(){
 
     const [isWeb, setWeb] = useState(true)
+    const [styleWeb, setStyleWeb] = useState (`bg-[#279AF1] text-white`)
+    const [styleAndroid, setStyleAndroid] = useState (`bg-blue/25 text-black hover:bg-[#279AF1] hover:text-white`)
     function getType(type){
-      const btnWeb = document.getElementById("web")
-      const btnAndroid = document.getElementById("android")
       if(type === "web"){
-        
-        if(btnWeb != null){
-          btnWeb.className = `h-8 md:h-12 w-24 md:w-36 bg-[#279AF1] border rounded-md text-white`
-        }
-        if (btnAndroid != null){
-            btnAndroid.className = `h-8 md:h-12 w-24 md:w-36 bg-blue/25 border rounded-md text-black hover:bg-[#279AF1] hover:text-white`
-        }
+        setStyleWeb(`h-8 md:h-12 w-24 md:w-36 bg-[#279AF1] border rounded-md text-white`)
+        setStyleAndroid(`bg-blue/25 text-black hover:bg-[#279AF1] hover:text-white`)
         setWeb(true)
       } else {
-        if(btnWeb != null){
-          btnWeb.className = `h-8 md:h-12 w-24 md:w-36 bg-blue/25 border rounded-md text-black hover:bg-[#279AF1] hover:text-white`
-        }
-        if(btnAndroid != null){
-          btnAndroid.className = `h-8 md:h-12 w-24 md:w-36 bg-[#279AF1] border rounded-md text-white`
-        }
+        setStyleWeb(`bg-blue/25 text-black hover:bg-[#279AF1] hover:text-white`)
+        setStyleAndroid(`h-8 md:h-12 w-24 md:w-36 bg-[#279AF1] border rounded-md text-white`)
         setWeb(false)
       }
     }
@@ -54,11 +45,10 @@ function MyWork(){
         <div className="w-4/5 mx-auto">
           <div className="bg-lightgreen w-32 sm:w-56 h-3"/>
           <h1 className="my-4 text-2xl md:text-3xl font-medium text-blue">My Works</h1>
-        
           <div className="my-4 flex justify-center gap-4">
-            <Button type="web" getData={getType} styled={true} />
+            <Button type="web" getData={getType} styled={`h-8 md:h-12 w-24 md:w-36 border rounded-md ${styleWeb}`} />
               <div className="w-2 h-8 md:h-10 my-auto bg-lightgreen"/>
-            <Button type="android" getData={getType}/>
+            <Button type="android" getData={getType} styled={`h-8 md:h-12 w-24 md:w-36 border rounded-md ${styleAndroid}`}/>
           </div>
           <div className="mt-4">
             {check(isWeb)}
