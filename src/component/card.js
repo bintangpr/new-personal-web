@@ -7,8 +7,8 @@ function card(props) {
   } else {
     techlist = ["React","JavaScript"]
   }
-  const listItems = techlist.map((techlist) =>
-  <h1 className="text-black text-lg md:text-xl font-normal">{techlist}</h1>
+  const listItems = techlist.map((techlist, index) =>
+  <h1 key={index} className="text-black text-lg md:text-xl font-normal">{techlist}</h1>
 );
     return (
       <div className={`mx-auto my-2 sm:my-0 sm:mx-0 h-80 sm:h-3/5screen md:h-2/5screen ${props.bg} w-64 sm:w-72 border-2 rounded-lg ${props.border}`}  >

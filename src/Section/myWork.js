@@ -10,12 +10,12 @@ function MyWork(){
     const [styleAndroid, setStyleAndroid] = useState (`bg-blue/25 text-black hover:bg-[#279AF1] hover:text-white`)
     function getType(type){
       if(type === "web"){
-        setStyleWeb(`h-8 md:h-12 w-24 md:w-36 bg-[#279AF1] border rounded-md text-white`)
+        setStyleWeb(`h-8 md:h-12 w-24 md:w-36 bg-[#279AF1] text-white`)
         setStyleAndroid(`bg-blue/25 text-black hover:bg-[#279AF1] hover:text-white`)
         setWeb(true)
       } else {
         setStyleWeb(`bg-blue/25 text-black hover:bg-[#279AF1] hover:text-white`)
-        setStyleAndroid(`h-8 md:h-12 w-24 md:w-36 bg-[#279AF1] border rounded-md text-white`)
+        setStyleAndroid(`h-8 md:h-12 w-24 md:w-36 bg-[#279AF1] text-white`)
         setWeb(false)
       }
     }
@@ -23,17 +23,22 @@ function MyWork(){
     function check(type){
       if(type){
         return(
-        portoWeb.map(({Image, projectName, description})=>{
+        portoWeb.map((item)=>{
           return(
-            <Porto img={Image} projectName={projectName} description={description} size="h-44 my-2 mx-auto"/>
+            <div key={item.id}>
+              <Porto key={item.id} img={item.Image} projectName={item.projectName} description={item.description} size="h-44 my-2 mx-auto"/>
+            </div>
           )
         })
         )
       } else {
         return(
-          protoAndroid.map(({Image, projectName, description})=>{
+          protoAndroid.map((item)=>{
             return(
-              <Porto img={Image} projectName={projectName} description={description} size="h-44 mx-auto"/>
+              <div key={item.id}>
+                <Porto img={item.Image} projectName={item.projectName} description={item.description} size="h-44 mx-auto"/>
+              </div>
+              
             )
           })
         )
